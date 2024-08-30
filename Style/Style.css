@@ -193,8 +193,7 @@ body {
 }
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
-main  {
-    background-image:image('img/bg.jpg');
+main > img  {
     background-size:cover;
         -webkit-animation: slidein 100s;
         animation: slidein 100s;
