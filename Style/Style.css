@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');    * {
+    transition: all 0.3s ease-in-out;
+}
+    body {
+        font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+}
+
+.right-column {
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.left-column {
+    width: 70%;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 70%;
+    height: 20px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #6a1b9a;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    width: 0; /* شروع از 0 برای انیمیشن */
+    transition: width 2s ease-in-out;
+}
+
+.skill-level::after {
+    content: attr(data-percent);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+}
+
+/* انیمیشن برای پر شدن نوارهای توانایی با اسکرول */
+@keyframes fillSkillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-level);
+    }
+}
+
+
+.contact p {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact img {
+    transition: transform 0.3s, filter 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.contact img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+   background-color: #403060;
+   background-image: radial-gradient( circle, rgba(  0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0.8 ) 100% );
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+main  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+@media (max-width: 767px) {
+    main {
+        flex-direction: column;
+    }
+
+    .right-column, .left-column {
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+
+    .skills ul, .projects ul {
+        padding: 0;
+    }
+
+    .skills li, .projects li {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: bounceIn 1s ease;
+    }
+
+    .contact p {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact img {
+        margin: 5px 0;
+    }
+}
+body.rtl {
+            direction: rtl;
+            text-align: right;
+            font-family: "Vazirmatn", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        #translate-btn {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg') no-repeat center;
+            background-size: contain;
+            width: 50px;
+            height: 30px;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+        #translate-btn.english {
+            background: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') no-repeat center;
+            background-size: contain;
+        }
+        body.rtl #translate-btn {
+            float: left;
+        }
+        body.rtl .right-column {
+            border-right: none;
+            border-left: 1px solid #e0e0e0;
+        }
+        body.rtl .left-column {
+            direction: ltr;
+        }
