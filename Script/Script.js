@@ -59,7 +59,7 @@ $('#translate-btn').click(function() {
                     break;
                 default:
                     if (element.text().includes('سلام، من احمد هستم، توسعه‌دهنده وب و بازی')) {
-                        element.text('Hi I\'m Ahmad, web&Game developer And Still in Progress =]');
+                        element.text('Hi Im Ahmad, web&Game developer And Still in Progress =]');
                     }
             }
         });
@@ -87,7 +87,7 @@ $('#translate-btn').click(function() {
                     element.text('سایر مهارت‌ها');
                     break;
                 default:
-                    if (element.text().includes('Hi I\'m Ahmad, web&Game developer And Still in Progress =]')) {
+                    if (element.text().includes('Hi Im Ahmad, web&Game developer And Still in Progress =]')) {
                         element.text('سلام، من احمد هستم، توسعه‌دهنده وب و بازی');
                     }
             }
